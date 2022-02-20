@@ -32,11 +32,11 @@ const QrScanBox = () => {
     setqrId(result?.data);
     if (result.data) {
       qrScanner.stop();
-      // navigate("/", {
-      //   state: {
-      //     qrId: result.data,
-      //   },
-      // });
+      navigate("/", {
+        state: {
+          qrId: result.data,
+        },
+      });
     }
   };
 

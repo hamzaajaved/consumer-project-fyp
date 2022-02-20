@@ -3,7 +3,7 @@ import { ProductsContext } from "../context/ProductsContext";
 import ProductInfo from "./ProductInfo";
 import "./HomeStyle.css";
 
-const SideBar = ({ camera, qrId }) => {
+const SideBar = ({ camera, qrId, prodInfo }) => {
   const [productInfo, setProductInfo] = useState(null);
   const { getProductById } = useContext(ProductsContext);
   //   console.log(qrId);
@@ -13,6 +13,7 @@ const SideBar = ({ camera, qrId }) => {
     product.then((prod) => setProductInfo(prod));
     // setProductInfo(product);
   }, [qrId]);
+
   return (
     <div className="sidebar">
       <section className="cameras">

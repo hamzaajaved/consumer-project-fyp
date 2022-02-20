@@ -6,7 +6,7 @@ const ProductInfo = (props) => {
 
   return (
     <div className="pd30">
-      {productInfo ? (
+      {productInfo?.id ? (
         <div>
           <p>
             <span>
@@ -52,7 +52,7 @@ const ProductInfo = (props) => {
           </p>
         </div>
       ) : (
-        <div>Please Scan the product</div>
+        <div className="empty">Please Scan the product</div>
       )}
     </div>
   );
